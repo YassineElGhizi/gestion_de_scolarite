@@ -30,7 +30,6 @@ public class PlanningService {
     public void updatePlanning(PlanningCompositeKey id , Integer niveau){
         Optional<Planning> p = planningRepository.findById(id);
         Planning pp = p.get();
-        System.out.println("pp =" + pp);
         pp.setNiveau(niveau);
     }
 

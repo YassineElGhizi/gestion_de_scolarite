@@ -10,9 +10,9 @@ import javax.persistence.Table;
 public class Evaluation {
     @EmbeddedId
     EvaluationCompositeKey id;
-    Integer Note;
+    Float Note;
 
-    public Evaluation(EvaluationCompositeKey id, Integer note) {
+    public Evaluation(EvaluationCompositeKey id, Float note) {
         this.id = id;
         Note = note;
     }
@@ -28,11 +28,11 @@ public class Evaluation {
         this.id = id;
     }
 
-    public Integer getNote() {
+    public Float getNote() {
         return Note;
     }
 
-    public void setNote(Integer note) {
+    public void setNote(Float note) {
         Note = note;
     }
 
