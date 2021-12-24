@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EtudiantService {
@@ -26,12 +27,16 @@ public class EtudiantService {
 
     @Transactional
     public void updateEtudiant(String cne, String nom, String prenom) {
-        Etudiant e = etudiantRepository.findEtudiantByCne(cne);
+        Optional<Etudiant>  ee = etudiantRepository.findByCne(cne);
+        Etudiant e = ee.get();
         e.setNom(nom);
         e.setPrenom(prenom);
     }
 
     public void deleteEtudiant(String cne) {
-        etudiantRepository.deleteByCne(cne);
+//        etudiantRepository.deleteByCne(cne);
+        System.out.println("we neeed to delete this e " + cne);
+        etudiantRepository.deleteById(cne);
+
     }
 }

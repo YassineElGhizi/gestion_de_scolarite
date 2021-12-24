@@ -20,6 +20,7 @@ public class EtudiantController {
         etudiantService.addEtudiant(e);
     }
 
+//    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping()
     public List<Etudiant> getEtudiants(){
         return etudiantService.getEtudiants();
@@ -34,7 +35,5 @@ public class EtudiantController {
     }
 
     @DeleteMapping(path = "{cne}")
-    public void deleteEtudiant(@PathVariable("cne") String cne){
-        etudiantService.deleteEtudiant(cne);
-    }
+    public void deleteEtudiant(@PathVariable("cne") String cne){etudiantService.deleteEtudiant(cne);}
 }
