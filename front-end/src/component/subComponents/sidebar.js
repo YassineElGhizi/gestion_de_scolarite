@@ -61,7 +61,7 @@ export default function Sidebar(){
                         </li>
                         <li className="nav-main-item">
                             <a className="nav-main-link" data-toggle="submenu"
-                               aria-haspopup="true" aria-expanded="false" href="#">
+                               aria-haspopup="true" aria-expanded="false" href="/filiere">
                                 <span className="nav-main-link-name">Filiere</span>
                             </a>
                         </li>

@@ -10,6 +10,8 @@ import Etudiant from "./Etudiant";
 
 import Sidebar from "./subComponents/sidebar";
 import Contentheader from "./subComponents/Contentheader";
+import Filiere from "./Filiere";
+
 
 export default function Navbar(){
 
@@ -28,7 +30,7 @@ export default function Navbar(){
                 <div>
                     <Routes >
                         <Route path="/etudiant" element={<Etudiant />}></Route>
-                        {/*<Route path="/2" element={<Myuseeffect />}></Route>*/}
+                        <Route path="/filiere" element={<Filiere />}></Route>
                     </Routes >
                 </div>
             </Router>

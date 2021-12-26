@@ -8,7 +8,7 @@ import java.security.PublicKey;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/filier")
+@RequestMapping(path = "api/filiere")
 public class FilierController {
 
     final FilierService filierService;

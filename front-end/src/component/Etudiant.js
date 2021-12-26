@@ -24,7 +24,6 @@ export default function Etudiant(){
     let DeleteEtudiant = (obj) => {
         let cne = obj.target.value
         try {
-            alert('dafuk !!')
             axios.delete('http://localhost:8080/api/etudiant/' + cne);
             setEtudiant(etudiant.filter(item => item.cne !== cne));
         } catch (error) {
